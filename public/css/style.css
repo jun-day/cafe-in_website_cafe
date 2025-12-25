@@ -1,0 +1,258 @@
+/* ============================================================
+   GLOBAL
+============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* ============================================================
+   CUSTOMER – HOMEPAGE
+============================================================ */
+.hero-section {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=1350&q=80')
+        no-repeat center center;
+    background-size: cover;
+    height: 80vh;
+}
+
+/* Star Rating */
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+.star-rating input {
+    display: none;
+}
+.star-rating label {
+    font-size: 2rem;
+    color: #ccc;
+    cursor: pointer;
+    padding: 0 5px;
+}
+.star-rating input:checked ~ label,
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+    color: #ffc107;
+}
+
+/* ============================================================
+   CUSTOMER – ABOUT
+============================================================ */
+.team-member {
+    transition: all 0.25s ease;
+}
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,.1);
+}
+
+/* ============================================================
+   CUSTOMER – MENU
+============================================================ */
+.menu-item {
+    border-radius: 0.75rem;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,.1);
+}
+.menu-item img {
+    transition: transform 0.3s ease;
+}
+.menu-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Category Filter */
+.category-btn {
+    background-color: #ffffff;
+    color: #374151;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+.category-btn:hover {
+    color: #92400e;
+}
+.active-category {
+    color: #f59e0b;
+}
+
+/* Sticky spacing */
+main {
+    padding-top: 1.5rem;
+}
+
+/* Cart Dropdown */
+#cartDropdown {
+    position: absolute;
+    right: 1rem;
+    top: 4.5rem;
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+    box-shadow: 0 15px 35px rgba(0,0,0,.18);
+    z-index: 9999;
+}
+
+/* ============================================================
+   INVOICE MODAL
+============================================================ */
+.invoice-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0,0,0,.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.invoice-modal-content {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    max-width: 500px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 25px rgba(0,0,0,.2);
+}
+
+/* Print Invoice */
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    .invoice-modal-overlay,
+    .invoice-modal-overlay * {
+        visibility: visible;
+    }
+    .invoice-modal-overlay {
+        position: absolute;
+        background-color: #ffffff;
+    }
+    .invoice-modal-content {
+        box-shadow: none;
+        max-width: 100%;
+        padding: 0;
+    }
+    .invoice-modal-content button {
+        display: none;
+    }
+}
+
+/* ============================================================
+   CUSTOMER – LOCATION
+============================================================ */
+.hours-item {
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: .5rem;
+    margin-bottom: .5rem;
+}
+.hours-item:last-child {
+    border-bottom: none;
+}
+
+/* ============================================================
+   ADMIN PANEL
+============================================================ */
+
+/* Navbar */
+.admin-navbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+}
+.admin-nav-link {
+    font-weight: 600;
+    color: #333;
+    padding: 8px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+.admin-nav-link:hover {
+    background-color: #f0f0f0;
+}
+
+/* Buttons */
+.btn-primary,
+.btn-warning,
+.btn-danger {
+    font-weight: 600;
+    border-radius: 8px;
+}
+
+/* Table */
+.admin-table {
+    font-size: .95rem;
+}
+.admin-table thead th {
+    background-color: #1f2937;
+    color: #ffffff;
+    font-weight: 600;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px;
+}
+.admin-table tbody td {
+    vertical-align: middle;
+    padding: 12px 10px;
+}
+.admin-table img {
+    border-radius: 6px;
+    object-fit: cover;
+}
+.admin-table .action-btn {
+    display: inline-flex;
+    gap: 6px;
+}
+
+/* Badge */
+.badge {
+    font-weight: 600;
+    padding: 6px 10px;
+    border-radius: 6px;
+    text-transform: capitalize;
+}
+
+/* ============================================================
+   AUTH – LOGIN ADMIN
+============================================================ */
+.login-page {
+    min-height: 100vh;
+    background-color: #f5f6fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-box {
+    max-width: 380px;
+    width: 100%;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.08);
+}
+.login-box h3 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+.login-box label {
+    font-weight: 500;
+}
+.login-box .form-control {
+    border-radius: 8px;
+    padding: 10px;
+}
+.login-box .btn-warning {
+    width: 100%;
+    padding: 10px;
+    font-weight: 600;
+}
