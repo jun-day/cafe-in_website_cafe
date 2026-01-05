@@ -105,33 +105,6 @@
                     </p>
                 </div>
 
-                <!-- MEDIA SOSIAL -->
-                <div class="mt-8">
-                    <h3 class="text-xl font-semibold mb-4">
-                        Media Sosial
-                    </h3>
-
-                    <div class="flex space-x-4">
-                        <a href="#"
-                           class="bg-blue-600 text-white p-3 rounded-full
-                                  hover:bg-blue-700 transition duration-300">
-                            F
-                        </a>
-
-                        <a href="#"
-                           class="bg-pink-600 text-white p-3 rounded-full
-                                  hover:bg-pink-700 transition duration-300">
-                            IG
-                        </a>
-
-                        <a href="#"
-                           class="bg-blue-400 text-white p-3 rounded-full
-                                  hover:bg-blue-500 transition duration-300">
-                            TW
-                        </a>
-                    </div>
-                </div>
-
             </div>
         </div>
     </div>

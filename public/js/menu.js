@@ -105,7 +105,6 @@ document.addEventListener("DOMContentLoaded", function () {
             qrisContainer.classList.remove("hidden");
             checkoutButton.textContent = "Lanjutkan Pembayaran";
             
-            // TAMBAHKAN INI: Hide input jumlah pembayaran & kembalian
             amountPaidInput.closest('div').classList.add('hidden');
             changeAmountEl.closest('div').classList.add('hidden');
             
@@ -113,7 +112,6 @@ document.addEventListener("DOMContentLoaded", function () {
             qrisContainer.classList.add("hidden");
             checkoutButton.textContent = "Pesan Sekarang";
             
-            // TAMBAHKAN INI: Show kembali input jumlah pembayaran & kembalian
             amountPaidInput.closest('div').classList.remove('hidden');
             changeAmountEl.closest('div').classList.remove('hidden');
         }
@@ -191,7 +189,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     /* ================================
-       CHANGE CALCULATION
+       CALCULASI KEMBALIAN
     ================================= */
     function calculateChange() {
         const paid = Number(amountPaidInput.value) || 0;
@@ -202,7 +200,7 @@ document.addEventListener("DOMContentLoaded", function () {
     amountPaidInput.addEventListener("input", calculateChange);
 
     /* ================================
-       CHECKOUT → KIRIM PESANAN + SHOW STRUK
+       CHECKOUT → KIRIM PESANAN DAN STRUK
     ================================= */
     checkoutButton.addEventListener("click", function () {
 
@@ -222,7 +220,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return alert("Pembayaran kurang!");
         }
         
-        // Untuk QRIS, set paid = total (karena pasti exact)
+        // Untuk QRIS, set paid = total 
         const finalPaid = payment === "qris" ? total : paid;
 
         // Data untuk dikirim ke backend
@@ -230,7 +228,7 @@ document.addEventListener("DOMContentLoaded", function () {
             customer_name: name,
             meja: table,
             total_harga: total,
-            payment_method: payment, // tambahkan ini juga
+            payment_method: payment, 
             items: cart.map(item => ({
                 id: item.id,
                 quantity: item.quantity,
@@ -238,8 +236,6 @@ document.addEventListener("DOMContentLoaded", function () {
             })),
             _token: document.querySelector('meta[name="csrf-token"]').getAttribute('content')
         };
-
-        // ... rest of the code (fetch dst)
 
         fetch("/orders/store", {
             method: "POST",

@@ -6,20 +6,15 @@
 
     <title>@yield('title', 'Cafe-in')</title>
 
-    {{-- TailwindCSS --}}
     <script src="https://cdn.tailwindcss.com"></script>
-
-    {{-- Fonts --}}
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-    {{-- Global CSS --}}
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 
 <body class="bg-gray-50 text-gray-800 font-[Poppins]">
 
     {{-- ===========================
-        HEADER CUSTOMER
+        HEADER CUSTOMERS
     ============================ --}}
     <header class="bg-white shadow-md sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-4">

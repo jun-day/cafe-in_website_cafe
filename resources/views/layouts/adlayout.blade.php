@@ -6,13 +6,8 @@
 
     <title>@yield('title', 'Cafe-in Admin')</title>
 
-    {{-- Bootstrap CSS --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    {{-- Fonts --}}
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-    {{-- Global CSS --}}
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 
@@ -25,7 +20,7 @@
         <div class="container">
             <div class="d-flex justify-content-between align-items-center py-3">
                 <a href="{{ route('admin.menu.index') }}" class="text-decoration-none">
-                    <span class="fw-bold text-warning fs-3" style="color: #92400e;">Cafe-in Admin</span>
+                    <span class="fw-bold fs-3" style="color: #92400e;">Cafe-in Admin</span>
                 </a>
 
                 <nav class="d-none d-md-flex align-items-center gap-4">
