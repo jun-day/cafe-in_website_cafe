@@ -90,7 +90,6 @@
                                 Rp {{ number_format($menu->harga, 0, ',', '.') }}
                             </td>
 
-                            <!-- AKSI -->
                             <td class="text-center">
                                 <div class="d-flex justify-content-center gap-2">
 

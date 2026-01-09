@@ -33,40 +33,9 @@
                         Ruang Karyawan
                     </a>
                 </nav>
-
-                {{-- Mobile menu button --}}
-                <div class="md:hidden flex items-center">
-                    <button class="mobile-menu-button outline-none">
-                        <svg class="w-6 h-6 text-gray-700" fill="none"
-                             stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                             viewBox="0 0 24 24" stroke="currentColor">
-                            <path d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                    </button>
-                </div>
             </div>
         </div>
-
-        {{-- Mobile Dropdown --}}
-        <div class="hidden mobile-menu">
-            <ul class="bg-white border-t">
-                <li><a href="{{ route('home') }}" class="block px-4 py-2 text-sm">Beranda</a></li>
-                <li><a href="{{ route('menu') }}" class="block px-4 py-2 text-sm">Menu</a></li>
-                <li><a href="{{ route('about') }}" class="block px-4 py-2 text-sm">Tentang Kami</a></li>
-                <li><a href="{{ route('location') }}" class="block px-4 py-2 text-sm">Lokasi</a></li>
-                <li><a href="{{ route('contact') }}" class="block px-4 py-2 text-sm">Kontak</a></li>
-            </ul>
-        </div>
     </header>
-
-    {{-- Mobile menu toggle --}}
-    <script>
-        const btn = document.querySelector(".mobile-menu-button");
-        const menu = document.querySelector(".mobile-menu");
-        btn.addEventListener("click", () => {
-            menu.classList.toggle("hidden");
-        });
-    </script>
 
     {{-- ===========================
         CONTENT
