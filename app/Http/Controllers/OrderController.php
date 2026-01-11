@@ -11,12 +11,6 @@ use Illuminate\Support\Facades\DB;
 
 class OrderController extends Controller
 {
-    /*
-    |-------------------------------------------------------------------------- 
-    | CUSTOMER
-    |-------------------------------------------------------------------------- 
-    */
-
     public function checkout()
     {
         return view('customer.checkout');

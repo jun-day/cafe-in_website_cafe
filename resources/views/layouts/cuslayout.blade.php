@@ -45,6 +45,18 @@
     </main>
 
     {{-- ===========================
+        Bubble
+    ============================ --}}
+    <a href="https://wa.me/6281234567890?text=Halo%20saya%20ingin%20bertanya"
+    class="wa-bubble"
+    target="_blank"
+    aria-label="Chat WhatsApp">
+
+    <img src="{{ asset('images/wa2.png') }}" alt="WhatsApp">
+
+    </a>
+
+    {{-- ===========================
         FOOTER
     ============================ --}}
     <footer class="bg-gray-800 text-white py-8">
