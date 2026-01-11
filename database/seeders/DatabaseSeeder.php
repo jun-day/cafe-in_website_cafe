@@ -20,14 +20,6 @@ class DatabaseSeeder extends Seeder
             'hp' => '0812345678901', 
             'password' => bcrypt('P@55word'), 
         ]); 
-        #untuk record berikutnya silahkan, beri nilai berbeda pada nilai: nama, email, hp dengan nilai masing-masing anggota kelompok 
-        User::create([ 
-            'nama' => 'Sopian Aji', 
-            'email' => 'sopian4ji@gmail.com', 
-            'status' => 1, 
-            'hp' => '081234567892', 
-            'password' => bcrypt('P@55word'), 
-        ]); 
     } 
 }
 
